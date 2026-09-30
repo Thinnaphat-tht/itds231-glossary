@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>คลังศัพท์ ITDS231</title>
+<meta name="description" content="คลังศัพท์ ITDS231 Computer Networks Lecture 1–7 ใช้ทวนก่อนสอบ">
+<style>
+:root {
+  --bg:#f7f8fa; --surface:#ffffff; --text:#1b1f27; --muted:#5b6472; --line:#e2e6ec;
+  --accent:#1d5fd6; --accent-soft:#e6eefc; --mark:#ffe58a; --note:#fff6d6; --note-line:#e6c85a;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg:#0f1319; --surface:#171c24; --text:#e8ebf0; --muted:#9aa4b2; --line:#2a313c;
+    --accent:#7aa7ff; --accent-soft:#1d2a45; --mark:#6b5a10; --note:#2c2712; --note-line:#8a7420;
+  }
+}
+:root[data-theme="dark"] {
+  --bg:#0f1319; --surface:#171c24; --text:#e8ebf0; --muted:#9aa4b2; --line:#2a313c;
+  --accent:#7aa7ff; --accent-soft:#1d2a45; --mark:#6b5a10; --note:#2c2712; --note-line:#8a7420;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; scroll-padding-top:84px; }
+body { margin:0; background:var(--bg); color:var(--text); line-height:1.65;
+  font-family:"Sarabun","Noto Sans Thai",system-ui,-apple-system,"Segoe UI",sans-serif; }
+header.bar { position:sticky; top:0; z-index:10; background:var(--surface); border-bottom:1px solid var(--line);
+  display:flex; gap:12px; align-items:center; padding:10px 16px; }
+header.bar h1 { font-size:1.05rem; margin:0; white-space:nowrap; }
+#q { flex:1; min-width:0; padding:8px 12px; border:1px solid var(--line); border-radius:8px;
+  background:var(--bg); color:var(--text); font:inherit; }
+#q:focus, button:focus-visible, a:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+#theme { border:1px solid var(--line); background:var(--bg); color:var(--text); border-radius:8px;
+  padding:8px 12px; font:inherit; cursor:pointer; white-space:nowrap; }
+main { max-width:960px; margin:0 auto; padding:20px 16px 60px; }
+.intro { color:var(--muted); margin:0 0 16px; }
+nav.toc { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px; }
+nav.toc a { background:var(--accent-soft); color:var(--accent); text-decoration:none; padding:6px 12px;
+  border-radius:999px; font-size:.9rem; }
+section { margin-bottom:32px; }
+h2 { font-size:1.25rem; margin:0 0 10px; }
+h2 small { color:var(--muted); font-weight:400; font-size:.8rem; margin-left:6px; }
+table { width:100%; border-collapse:collapse; background:var(--surface); border:1px solid var(--line);
+  border-radius:10px; overflow:hidden; }
+th, td { text-align:left; vertical-align:top; padding:10px 12px; border-bottom:1px solid var(--line); }
+thead th { background:var(--accent-soft); color:var(--accent); font-size:.85rem; }
+tbody th { width:32%; font-weight:600; }
+tbody tr:last-child > * { border-bottom:0; }
+code { background:var(--accent-soft); padding:1px 5px; border-radius:4px; font-size:.9em; }
+mark { background:var(--mark); color:inherit; border-radius:2px; }
+.note { background:var(--note); border:1px solid var(--note-line); border-radius:8px; padding:10px 12px; margin-top:10px; }
+#empty { display:none; color:var(--muted); text-align:center; padding:40px 0; }
+footer { text-align:center; color:var(--muted); font-size:.85rem; padding:0 16px 32px; }
+footer a { color:var(--accent); }
+@media (max-width:640px) {
+  header.bar h1 { display:none; }
+  thead { display:none; }
+  tr { display:block; border-bottom:1px solid var(--line); padding:8px 0; }
+  tbody th, td { display:block; width:auto; border:0; padding:2px 12px; }
+  tbody th { color:var(--accent); }
+}
+</style>
+</head>
+<body>
+<header class="bar">
+  <h1>📚 คลังศัพท์ ITDS231</h1>
+  <input id="q" type="search" placeholder="ค้นหาศัพท์ เช่น CSMA, VLAN, ACK" aria-label="ค้นหาศัพท์">
+  <button id="theme" type="button" aria-label="สลับโหมดสว่าง/มืด">🌓 สลับโหมด</button>
+</header>
+<main>
+  <p class="intro">รวมศัพท์จากสไลด์ทุก Lecture (L1–2, L3–4, L5.0, L5.1, L5.2, L6.1, L6.2, L7) อธิบายสั้นๆ พอเข้าใจ ใช้ทวนก่อนสอบ ศัพท์ที่มีเครื่องหมาย 📎 คือไม่อยู่ในข้อความสไลด์ (สไลด์เป็นรูป) เขียนจากความรู้พื้นฐานตาม syllabus ให้เช็กกับสไลด์อีกที</p>
+  <p class="intro">ทั้งหมด 295 รายการ</p>
+  <nav class="toc" aria-label="สารบัญ"><a href="#s0">🌐 Lecture 1–2 — Introduction to Computer Networks</a><a href="#s1">🖥️ Lecture 3–4 — Application Layer, HTTP, Email, DNS, Video/CDN</a><a href="#s2">🔗 Lecture 5.0 — Data Link Layer Foundation</a><a href="#s3">🛡️ Lecture 5.1 — Error Detection &amp; Correction</a><a href="#s4">🚦 Lecture 5.2 — Flow Control, ARQ, HDLC</a><a href="#s5">📡 Lecture 6.1 — Media Access Control (MAC)</a><a href="#s6">🔌 Lecture 6.2 — Ethernet</a><a href="#s7">🧭 Lecture 7 — ARP, Switch, STP, VLAN</a><a href="#s8">Quiz คำศัพท์</a></nav>
+  <section id="s0"><h2>🌐 Lecture 1–2 — Introduction to Computer Networks <small>52 คำ</small></h2><table><thead><tr><th>ศัพท์</th><th>คืออะไร</th></tr></thead><tbody>
+<tr><th scope="row"><strong>Internet</strong></th><td>เครือข่ายของเครือข่าย (network of networks) ที่ ISP ต่างๆ เชื่อมต่อกัน</td></tr>
+<tr><th scope="row"><strong>Host / End system</strong></th><td>อุปกรณ์ปลายทางที่รันแอป เช่น PC มือถือ server อยู่ที่ขอบ (edge) ของ Internet</td></tr>
+<tr><th scope="row"><strong>Packet switch</strong></th><td>อุปกรณ์ที่ส่งต่อ packet เช่น router และ switch</td></tr>
+<tr><th scope="row"><strong>ISP</strong></th><td>Internet Service Provider ผู้ให้บริการอินเทอร์เน็ต</td></tr>
+<tr><th scope="row"><strong>Tier-1 ISP</strong></th><td>ISP ใหญ่ระดับแกนกลาง ครอบคลุมระดับชาติและนานาชาติ เช่น AT&amp;T, NTT</td></tr>
+<tr><th scope="row"><strong>IXP</strong></th><td>Internet Exchange Point จุดที่ ISP หลายเจ้ามาเชื่อมกัน (peering link)</td></tr>
+<tr><th scope="row"><strong>Content provider network</strong></th><td>เครือข่ายส่วนตัวของ Google, Facebook ที่ต่อ data center ตรงไปหาผู้ใช้ โดยไม่ผ่าน ISP ใหญ่</td></tr>
+<tr><th scope="row"><strong>Protocol</strong></th><td>กติกาที่กำหนดรูปแบบและลำดับของข้อความ รวมถึงการกระทำเมื่อส่ง/รับข้อความ เช่น HTTP, TCP, IP</td></tr>
+<tr><th scope="row"><strong>RFC / IETF</strong></th><td>RFC = Request for Comments เอกสารมาตรฐาน Internet · IETF = องค์กรที่ออกมาตรฐาน</td></tr>
+<tr><th scope="row"><strong>Network edge</strong></th><td>ส่วนขอบ: host (client/server) และ access network</td></tr>
+<tr><th scope="row"><strong>Access network</strong></th><td>เครือข่ายที่ต่อ end system เข้ากับ edge router เช่น cable, DSL, WiFi, 4G/5G, Ethernet</td></tr>
+<tr><th scope="row"><strong>Network core</strong></th><td>ส่วนแกนกลาง: mesh ของ router ที่เชื่อมกัน</td></tr>
+<tr><th scope="row"><strong>HFC</strong></th><td>Hybrid Fiber Coax เคเบิลทีวี/อินเทอร์เน็ตผ่านสาย coax+fiber แบบ asymmetric (ขาลงเร็วกว่าขาขึ้น) และบ้านแชร์สายกัน</td></tr>
+<tr><th scope="row"><strong>CMTS / Cable modem</strong></th><td>อุปกรณ์ที่ปลายสาย cable ฝั่ง ISP (CMTS) และฝั่งบ้าน (modem)</td></tr>
+<tr><th scope="row"><strong>FDM</strong></th><td>Frequency Division Multiplexing แบ่งช่องสัญญาณตามย่านความถี่</td></tr>
+<tr><th scope="row"><strong>DSL / DSLAM</strong></th><td>ใช้สายโทรศัพท์เดิม ส่ง voice กับ data คนละความถี่ไปที่ DSLAM ของ central office แบบ dedicated line</td></tr>
+<tr><th scope="row"><strong>WLAN / WiFi</strong></th><td>เครือข่ายไร้สายในพื้นที่ใกล้ (มาตรฐาน 802.11) ผ่าน access point</td></tr>
+<tr><th scope="row"><strong>Twisted pair / Coaxial / Fiber optic</strong></th><td>สื่อนำสัญญาณแบบมีสาย: สายทองแดงเกลียวคู่ (Cat5, Cat6) · สาย coax หุ้มซ้อนแกนร่วม · ใยแก้วส่งแสง เร็วสุดและทนสัญญาณรบกวน</td></tr>
+<tr><th scope="row"><strong>Guided / Unguided media</strong></th><td>Guided = สัญญาณวิ่งในสายจริง · Unguided = สัญญาณวิ่งในอากาศ เช่น radio</td></tr>
+<tr><th scope="row"><strong>Bandwidth / Link capacity (R)</strong></th><td>อัตราส่งข้อมูลของลิงก์ หน่วย bps</td></tr>
+<tr><th scope="row"><strong>Packet</strong></th><td>ก้อนข้อมูลที่ host หั่นจากข้อความแอป ขนาด L บิต</td></tr>
+<tr><th scope="row"><strong>Packet switching</strong></th><td>หั่นข้อมูลเป็น packet แชร์ลิงก์กัน เหมาะกับข้อมูลเป็นช่วงๆ (bursty) แต่อาจคิวยาวหรือ packet หาย</td></tr>
+<tr><th scope="row"><strong>Circuit switching</strong></th><td>จองช่องสัญญาณตลอดการโทร (dedicated) ประสิทธิภาพคงที่ แต่ช่องว่างแล้วไม่มีใครใช้ได้ ใช้ในโทรศัพท์แบบเดิม</td></tr>
+<tr><th scope="row"><strong>TDM</strong></th><td>Time Division Multiplexing แบ่งตามช่วงเวลา (time slot)</td></tr>
+<tr><th scope="row"><strong>Store-and-forward</strong></th><td>router ต้องได้รับ packet ครบทั้งก้อนก่อน จึงส่งต่อไปลิงก์ถัดไปได้</td></tr>
+<tr><th scope="row"><strong>Forwarding</strong></th><td>การกระทำภายใน router: ย้าย packet จาก input link ไป output link ตาม forwarding table (local)</td></tr>
+<tr><th scope="row"><strong>Routing</strong></th><td>การหาเส้นทางจากต้นทางถึงปลายทางด้วย routing algorithm (global)</td></tr>
+<tr><th scope="row"><strong>Transmission delay</strong></th><td>เวลาผลัก packet ลงสาย = L/R</td></tr>
+<tr><th scope="row"><strong>Propagation delay</strong></th><td>เวลาสัญญาณเดินทางบนสาย = d/s (d = ความยาวสาย, s = ความเร็วสัญญาณ ราว 2x10^8 m/s)</td></tr>
+<tr><th scope="row"><strong>Processing delay</strong></th><td>เวลาที่ router ตรวจ bit error และเลือก output link (เล็กมาก)</td></tr>
+<tr><th scope="row"><strong>Queueing delay</strong></th><td>เวลารอคิวที่ output link ขึ้นกับความหนาแน่นของ traffic</td></tr>
+<tr><th scope="row"><strong>Nodal delay</strong></th><td>รวม 4 delay = proc + queue + trans + prop</td></tr>
+<tr><th scope="row"><strong>Traffic intensity</strong></th><td>La/R (a = อัตรา packet เข้า) ถ้าเข้าใกล้ 1 คิวยาวมาก ถ้าเกิน 1 delay เป็นอนันต์</td></tr>
+<tr><th scope="row"><strong>Packet loss</strong></th><td>packet ที่มาตอนบัฟเฟอร์เต็มจะถูกทิ้ง</td></tr>
+<tr><th scope="row"><strong>Throughput</strong></th><td>อัตราบิตที่ส่งถึงผู้รับจริง (bits ต่อหน่วยเวลา)</td></tr>
+<tr><th scope="row"><strong>Bottleneck link</strong></th><td>ลิงก์ที่ช้าสุดบนเส้นทาง เป็นตัวจำกัด throughput ปลายทาง</td></tr>
+<tr><th scope="row"><strong>RTT</strong></th><td>Round-Trip Time เวลาที่ packet เล็กไปกลับระหว่าง client กับ server</td></tr>
+<tr><th scope="row"><strong>traceroute</strong></th><td>โปรแกรมวัด delay ไปยัง router แต่ละตัวบนเส้นทาง โดยใช้ TTL</td></tr>
+<tr><th scope="row"><strong>Layering / Protocol stack</strong></th><td>แบ่งระบบเป็นชั้น แต่ละชั้นให้บริการชั้นบน Internet มี 5 ชั้น: application, transport, network, link, physical</td></tr>
+<tr><th scope="row"><strong>OSI model</strong></th><td>โมเดล 7 ชั้น เพิ่ม presentation (เข้ารหัส/บีบอัด) และ session (ซิงก์/ฟื้นข้อมูล) ซึ่ง Internet ไม่มี</td></tr>
+<tr><th scope="row"><strong>Encapsulation</strong></th><td>แต่ละชั้นห่อข้อมูลด้วย header ของตัวเอง: message → segment → datagram → frame</td></tr>
+<tr><th scope="row"><strong>Segment / Datagram / Frame</strong></th><td>หน่วยข้อมูลของ transport / network / link layer ตามลำดับ</td></tr>
+<tr><th scope="row"><strong>Packet sniffing</strong></th><td>ดักอ่าน packet ที่ผ่านสื่อแชร์ (เช่น WiFi) ตัวอย่างโปรแกรม Wireshark</td></tr>
+<tr><th scope="row"><strong>IP spoofing</strong></th><td>ส่ง packet ที่ปลอม IP ต้นทางเพื่อหลอกปลายทาง</td></tr>
+<tr><th scope="row"><strong>DoS / DDoS</strong></th><td>ถล่มเป้าหมายด้วย traffic ปลอมจนใช้งานไม่ได้ DoS มาจากแหล่งเดียว DDoS มาจากหลายเครื่อง (botnet)</td></tr>
+<tr><th scope="row"><strong>Botnet</strong></th><td>เครือข่ายเครื่องที่ถูกฝังมัลแวร์ ใช้เป็นฐานโจมตี DDoS</td></tr>
+<tr><th scope="row"><strong>Firewall</strong></th><td>middlebox กรอง packet ที่เข้าออก ตั้งค่าเริ่มต้นแบบปิดทุกอย่างไว้ก่อน</td></tr>
+<tr><th scope="row"><strong>Authentication / Confidentiality / Integrity</strong></th><td>พิสูจน์ตัวตน / ปิดลับด้วยการเข้ารหัส / ตรวจว่าข้อมูลไม่ถูกแก้ (digital signature)</td></tr>
+<tr><th scope="row"><strong>ARPAnet</strong></th><td>เครือข่าย packet-switching ตัวแรก (1969) ต้นกำเนิด Internet</td></tr>
+<tr><th scope="row"><strong>ALOHAnet</strong></th><td>เครือข่ายดาวเทียมที่ฮาวาย (1970) ต้นแบบของ random access และ Ethernet</td></tr>
+<tr><th scope="row">📎 <strong>Topology</strong></th><td>รูปแบบการเชื่อมต่อ: bus (สายเส้นเดียว), star (ต่อที่ศูนย์กลาง), ring (วงแหวน), mesh (ต่อกันหลายทาง) · physical = การเดินสายจริง, logical = การเชื่อมตาม IP/interface</td></tr>
+<tr><th scope="row">📎 <strong>Nyquist / Shannon</strong></th><td>สูตร data rate limit: Nyquist = ช่องไร้ noise, Shannon = ช่องมี noise (ขึ้นกับ bandwidth และ SNR)</td></tr>
+</tbody></table></section><section id="s1"><h2>🖥️ Lecture 3–4 — Application Layer, HTTP, Email, DNS, Video/CDN <small>52 คำ</small></h2><table><thead><tr><th>ศัพท์</th><th>คืออะไร</th></tr></thead><tbody>
+<tr><th scope="row"><strong>Application layer</strong></th><td>ชั้นบนสุด ที่แอปคุยกันผ่าน protocol เช่น HTTP, SMTP, DNS แอปรันที่ end system เท่านั้น ไม่รันใน router</td></tr>
+<tr><th scope="row"><strong>Client-Server</strong></th><td>server เปิดตลอด มี IP ถาวร client ติดต่อ server และไม่คุยกันเอง เช่น HTTP, IMAP, FTP</td></tr>
+<tr><th scope="row"><strong>P2P (Peer-to-Peer)</strong></th><td>ไม่มี server กลาง ทุกเครื่องเป็นทั้งผู้ขอและผู้ให้บริการ ยิ่งคนเยอะยิ่งเร็ว เช่น BitTorrent, blockchain</td></tr>
+<tr><th scope="row"><strong>Process</strong></th><td>โปรแกรมที่รันอยู่ในเครื่อง ในเครื่องเดียวกันคุยกันด้วย IPC ข้ามเครื่องคุยด้วยการส่ง message</td></tr>
+<tr><th scope="row"><strong>IPC</strong></th><td>Inter-Process Communication การสื่อสารระหว่าง process ในเครื่องเดียวกัน (OS จัดการ)</td></tr>
+<tr><th scope="row"><strong>Client process / Server process</strong></th><td>ฝ่ายเริ่มติดต่อ / ฝ่ายรอให้ติดต่อ</td></tr>
+<tr><th scope="row"><strong>Socket</strong></th><td>ประตูระหว่างแอปกับ transport layer process ส่ง/รับ message ผ่าน socket</td></tr>
+<tr><th scope="row"><strong>IP address + Port number</strong></th><td>ใช้ระบุ process ข้ามเครือข่าย IP บอกเครื่อง port บอกว่าเป็นแอปไหนในเครื่อง</td></tr>
+<tr><th scope="row"><strong>PID</strong></th><td>Process ID เลขประจำ process ภายในเครื่อง</td></tr>
+<tr><th scope="row"><strong>TCP</strong></th><td>ส่งแบบเชื่อถือได้ (reliable) มี flow control, congestion control ต้อง setup connection แต่ไม่รับประกันเวลา/ความเร็ว/ความปลอดภัย</td></tr>
+<tr><th scope="row"><strong>UDP</strong></th><td>ส่งแบบไม่รับประกัน ไม่มี connection, flow control, congestion control ข้อมูลอาจหายหรือสลับลำดับ แต่เบาและเร็ว</td></tr>
+<tr><th scope="row"><strong>TLS</strong></th><td>Transport Layer Security เข้ารหัส TCP connection พร้อมตรวจ integrity และ authentication ทำงานในชั้น application</td></tr>
+<tr><th scope="row"><strong>Web object / URL</strong></th><td>หน้าเว็บประกอบด้วย object (HTML, รูป, CSS, JS) แต่ละชิ้นมี URL = host name + path name</td></tr>
+<tr><th scope="row"><strong>Base HTML file</strong></th><td>ไฟล์ HTML หลักที่อ้างถึง object อื่นๆ ในหน้า</td></tr>
+<tr><th scope="row"><strong>HTTP</strong></th><td>HyperText Transfer Protocol โปรโตคอลของเว็บ แบบ client/server ใช้ TCP port 80</td></tr>
+<tr><th scope="row"><strong>Stateless</strong></th><td>server ไม่จำประวัติ request ก่อนหน้าของ client (เพราะ state ซับซ้อน ถ้า crash ข้อมูลไม่ตรงกัน)</td></tr>
+<tr><th scope="row"><strong>Non-persistent HTTP</strong></th><td>1 TCP connection ส่งได้ 1 object เสร็จแล้วปิด เวลาตอบ = 2 RTT + เวลาส่งไฟล์ต่อ object</td></tr>
+<tr><th scope="row"><strong>Persistent HTTP (HTTP/1.1)</strong></th><td>เปิด connection ไว้ ส่งหลาย object ผ่านสายเดียว ลดเหลือราว 1 RTT สำหรับ object ที่เหลือ</td></tr>
+<tr><th scope="row"><strong>HTTP request message</strong></th><td>ข้อความ ASCII ประกอบด้วย request line (GET/POST/HEAD), header lines และ body</td></tr>
+<tr><th scope="row"><strong>GET / POST / HEAD / PUT</strong></th><td>GET ขอ object · POST ส่งข้อมูลฟอร์มใน body · HEAD ขอเฉพาะ header · PUT อัปโหลดไฟล์ทับของเดิม</td></tr>
+<tr><th scope="row"><strong>HTTP response / Status code</strong></th><td>ข้อความตอบกลับ มี status line เช่น 200 OK (สำเร็จ), 304 Not Modified, 404 Not Found</td></tr>
+<tr><th scope="row"><strong>Cookie</strong></th><td>ตัวช่วยให้ server จำ user มี 4 ส่วน: Set-Cookie ใน response, ไฟล์ cookie ที่ browser, Cookie header ใน request, ฐานข้อมูลหลังบ้าน ใช้ทำ session, ตะกร้า, tracking</td></tr>
+<tr><th scope="row"><strong>First-party / Third-party cookie</strong></th><td>First-party มาจากเว็บที่เราเข้า · Third-party มาจากบริษัทโฆษณาที่ฝังโค้ดในเว็บ ใช้ตาม user ข้ามเว็บ (targeted ads) Firefox และ Safari บล็อกเป็นค่าเริ่มต้น</td></tr>
+<tr><th scope="row"><strong>GDPR</strong></th><td>กฎหมายคุ้มครองข้อมูลส่วนบุคคลของ EU ถือว่า cookie ที่ระบุตัวบุคคลได้เป็นข้อมูลส่วนบุคคล</td></tr>
+<tr><th scope="row"><strong>Web cache / Proxy server</strong></th><td>ที่เก็บสำเนา object ใกล้ client ตอบแทน origin server ได้ (เป็นทั้ง client และ server) ลด response time และ traffic ที่ access link</td></tr>
+<tr><th scope="row"><strong>Forward proxy / Reverse proxy</strong></th><td>Forward อยู่ฝั่ง client (ซ่อน IP, กรองเว็บ, cache ในองค์กร) · Reverse อยู่ฝั่ง server (load balancing, ป้องกัน, cache ไฟล์คงที่)</td></tr>
+<tr><th scope="row"><strong>Cache hit / miss</strong></th><td>hit = มีใน cache ตอบเลย · miss = ไม่มี ต้องไปขอ origin server Average delay = hit rate x delay hit + miss rate x delay miss</td></tr>
+<tr><th scope="row"><strong>Cache-Control</strong></th><td>header บอกว่าแคชได้นานเท่าไร เช่น max-age=3600 (1 ชั่วโมง) หรือ no-cache (ต้องถาม server ทุกครั้ง)</td></tr>
+<tr><th scope="row"><strong>Conditional GET</strong></th><td>ส่ง If-modified-since ไป ถ้าไฟล์ไม่เปลี่ยน server ตอบ 304 Not Modified (ไม่ส่งไฟล์) ถ้าเปลี่ยนตอบ 200 OK พร้อมไฟล์ใหม่</td></tr>
+<tr><th scope="row"><strong>HTTP/2</strong></th><td>แบ่ง object เป็น frame แล้วส่งสลับกัน (multiplexing) ตั้ง priority ได้ และ server push ได้ เพื่อลด HOL blocking</td></tr>
+<tr><th scope="row"><strong>HOL blocking</strong></th><td>Head-of-Line blocking object เล็กต้องรอหลัง object ใหญ่ที่มาก่อน (FCFS) ใน HTTP/1.1 และถ้า TCP packet หายทุก object หยุดรอ</td></tr>
+<tr><th scope="row"><strong>QUIC / HTTP/3</strong></th><td>QUIC = protocol ระดับ application บน UDP รวม handshake เหลือ 1 RTT (บางกรณี 0-RTT) มี error/congestion control เอง HTTP/3 ทำงานบน QUIC</td></tr>
+<tr><th scope="row"><strong>Port ที่ควรจำ</strong></th><td>80 HTTP · 443 HTTPS · 25 SMTP · 53 DNS · 21/20 FTP · 22 SSH · 110 POP3 · 143 IMAP</td></tr>
+<tr><th scope="row"><strong>User agent</strong></th><td>โปรแกรมอ่าน/เขียนอีเมล เช่น Outlook</td></tr>
+<tr><th scope="row"><strong>Mail server</strong></th><td>เก็บกล่องจดหมาย (mailbox) และคิวข้อความขาออก</td></tr>
+<tr><th scope="row"><strong>SMTP</strong></th><td>Simple Mail Transfer Protocol ส่งอีเมลระหว่าง mail server ใช้ TCP port 25 มี 3 ช่วง: handshake, transfer, closure</td></tr>
+<tr><th scope="row"><strong>IMAP / POP3</strong></th><td>mail access protocol ใช้ดึงอีเมลจาก server มาอ่าน (SMTP ใช้ส่ง ไม่ใช่ดึง) IMAP เก็บบน server และจัดโฟลเดอร์ได้</td></tr>
+<tr><th scope="row"><strong>DNS</strong></th><td>Domain Name System ฐานข้อมูลแบบกระจายเป็นลำดับชั้น แปลงชื่อเป็น IP address และให้บริการอื่นเช่น alias, mail server name, load distribution</td></tr>
+<tr><th scope="row"><strong>Root / TLD / Authoritative server</strong></th><td>Root (ที่พึ่งสุดท้าย 13 ชุด ICANN ดูแล) → TLD (.com .org .edu .th) → Authoritative (ของแต่ละองค์กร ให้ชื่อเป็น IP จริง)</td></tr>
+<tr><th scope="row"><strong>Local DNS server</strong></th><td>DNS ที่ host ถามก่อน (ของ ISP) ตอบจาก cache หรือส่งต่อเข้าลำดับชั้น</td></tr>
+<tr><th scope="row"><strong>Iterated / Recursive query</strong></th><td>Iterated = server ตอบว่าไปถามใครต่อ · Recursive = โยนภาระหาคำตอบให้ server ที่ถูกถาม</td></tr>
+<tr><th scope="row"><strong>DNS caching / TTL</strong></th><td>จำผลแปลงชื่อไว้ชั่วคราว หมดอายุตาม TTL ทำให้เร็วแต่อาจล้าสมัย</td></tr>
+<tr><th scope="row"><strong>Resource Record (RR)</strong></th><td>รายการใน DNS รูปแบบ (name, value, type, ttl) ชนิด: A (ชื่อ → IP), NS (โดเมน → ชื่อ authoritative server), CNAME (ชื่อเล่น → ชื่อจริง), MX (ชื่อ mail server)</td></tr>
+<tr><th scope="row"><strong>DNSSEC / DNS cache poisoning</strong></th><td>DNSSEC = การยืนยันตัวตนให้ DNS · Cache poisoning = หลอก DNS ให้จำ IP ปลอม</td></tr>
+<tr><th scope="row"><strong>Spatial / Temporal coding</strong></th><td>บีบวิดีโอโดยใช้ความซ้ำภายในภาพ / ส่งเฉพาะส่วนต่างจากเฟรมก่อน</td></tr>
+<tr><th scope="row"><strong>CBR / VBR</strong></th><td>Constant / Variable Bit Rate อัตราการเข้ารหัสวิดีโอคงที่ / เปลี่ยนตามเนื้อหา</td></tr>
+<tr><th scope="row"><strong>Jitter / Playout buffer</strong></th><td>Jitter = delay เครือข่ายไม่คงที่ · Playout buffer = บัฟเฟอร์ฝั่ง client หน่วงการเล่นเพื่อให้เล่นต่อเนื่อง</td></tr>
+<tr><th scope="row"><strong>DASH</strong></th><td>Dynamic Adaptive Streaming over HTTP แบ่งวิดีโอเป็น chunk หลายคุณภาพ client เลือกเองตามแบนด์วิดท์ที่วัดได้ อ่านจาก manifest file</td></tr>
+<tr><th scope="row"><strong>Manifest file</strong></th><td>ไฟล์รายการ URL ของ chunk แต่ละคุณภาพ</td></tr>
+<tr><th scope="row"><strong>CDN</strong></th><td>Content Delivery Network กระจายสำเนาวิดีโอ/เนื้อหาไปไว้ server ใกล้ผู้ใช้ แก้ปัญหา mega-server เดียวที่ไม่ scale (เช่น Akamai, Netflix Open Connect)</td></tr>
+<tr><th scope="row"><strong>OTT</strong></th><td>Over-The-Top บริการส่งเนื้อหาบน Internet โดยไม่ผ่านผู้ให้บริการเครือข่ายโดยตรง เช่น Netflix</td></tr>
+<tr><th scope="row"><strong>Socket programming UDP vs TCP</strong></th><td>UDP = ไม่มี connection ต้องแนบ IP+port ปลายทางทุก packet · TCP = ต้อง handshake ก่อน เป็น byte stream ที่เชื่อถือได้</td></tr>
+</tbody></table></section><section id="s2"><h2>🔗 Lecture 5.0 — Data Link Layer Foundation <small>18 คำ</small></h2><table><thead><tr><th>ศัพท์</th><th>คืออะไร</th></tr></thead><tbody>
+<tr><th scope="row"><strong>Data Link Layer (DLL)</strong></th><td>ชั้นที่จัดการส่งข้อมูลข้ามลิงก์เดียว (hop เดียว) ต่างจาก physical ที่ส่งแค่บิต</td></tr>
+<tr><th scope="row"><strong>Frame</strong></th><td>หน่วยข้อมูลของ DLL ห่อ packet ด้วย header และ trailer</td></tr>
+<tr><th scope="row"><strong>Hop-by-hop delivery</strong></th><td>DLL ส่งทีละช่วงลิงก์ ทุก router จะแกะ frame เก่าแล้วสร้าง frame ใหม่สำหรับลิงก์ถัดไป</td></tr>
+<tr><th scope="row"><strong>Framing</strong></th><td>แบ่งสตรีมบิตเป็น frame โดยกำหนดขอบเขตให้ผู้รับแยกแต่ละ frame ออก</td></tr>
+<tr><th scope="row"><strong>FCS</strong></th><td>Frame Check Sequence ค่าตรวจ error ท้าย frame (trailer) ส่วนใหญ่คำนวณแบบ CRC</td></tr>
+<tr><th scope="row"><strong>Header / Payload / Trailer</strong></th><td>ส่วนหัว (ที่อยู่ ควบคุม) / ข้อมูลจาก network layer / ส่วนท้าย (FCS)</td></tr>
+<tr><th scope="row"><strong>LLC</strong></th><td>Logical Link Control ซับเลเยอร์บน เชื่อมกับ network layer และ multiplex protocol ชั้นบน</td></tr>
+<tr><th scope="row"><strong>MAC (sublayer)</strong></th><td>Media Access Control ซับเลเยอร์ล่าง ทำ framing, link addressing, FCS และการแย่งใช้สื่อที่แชร์</td></tr>
+<tr><th scope="row"><strong>Dedicated link / Shared link</strong></th><td>Dedicated = ลิงก์เฉพาะคู่ (full-duplex switch) · Shared = หลายเครื่องแชร์สื่อเดียว (bus, WiFi) ต้องมีกติกาแย่งใช้</td></tr>
+<tr><th scope="row"><strong>Multiple access</strong></th><td>ปัญหาที่หลายเครื่องแชร์ช่องเดียวแล้วอาจส่งพร้อมกัน จึงต้องมี MAC protocol</td></tr>
+<tr><th scope="row"><strong>Byte-oriented framing</strong></th><td>frame ประกอบจากตัวอักษร 8 บิต ใช้ byte ตัวพิเศษเป็นตัวแบ่ง (เช่น PPP)</td></tr>
+<tr><th scope="row"><strong>Bit-oriented framing</strong></th><td>frame เป็นสตรีมบิตล้วน ใช้ flag pattern เป็นตัวแบ่ง (เช่น HDLC)</td></tr>
+<tr><th scope="row"><strong>Byte stuffing</strong></th><td>ถ้า flag byte โผล่ในข้อมูล ให้แทรก ESC (escape character) นำหน้า ผู้รับจะไม่เข้าใจผิดว่าเป็นตัวแบ่ง frame</td></tr>
+<tr><th scope="row"><strong>Bit stuffing</strong></th><td>ถ้าเจอบิต 1 ติดกัน 5 ตัวในข้อมูล ให้แทรก 0 ทันที เพื่อไม่ให้เหมือน flag 01111110 (0x7E) ของ HDLC</td></tr>
+<tr><th scope="row"><strong>Flag</strong></th><td>รูปแบบบิต/ไบต์พิเศษที่ใช้ทำเครื่องหมายต้นและท้าย frame (HDLC = 01111110)</td></tr>
+<tr><th scope="row"><strong>Length / Fixed-size framing</strong></th><td>บอกขอบเขตด้วยฟิลด์ความยาวหรือขนาดคงที่ ไม่ต้อง stuffing (เช่น Ethernet, 802.11) Ethernet padding ไม่ใช่ stuffing</td></tr>
+<tr><th scope="row"><strong>PPP</strong></th><td>Point-to-Point Protocol โปรโตคอลแบบจุดต่อจุด ทำ framing เอง ใช้ใน PPPoE ของ broadband/DSL</td></tr>
+<tr><th scope="row"><strong>HDLC</strong></th><td>High-Level Data Link Control โปรโตคอล DLL แบบ bit-oriented ใช้ใน WAN serial link</td></tr>
+</tbody></table></section><section id="s3"><h2>🛡️ Lecture 5.1 — Error Detection &amp; Correction <small>18 คำ</small></h2><table><thead><tr><th>ศัพท์</th><th>คืออะไร</th></tr></thead><tbody>
+<tr><th scope="row"><strong>Noise</strong></th><td>สัญญาณรบกวนที่ทำให้บิตเพี้ยน เช่น thermal noise, สัญญาณแทรก, ฟ้าผ่า</td></tr>
+<tr><th scope="row"><strong>Single-bit error</strong></th><td>ผิดเพียง 1 บิต</td></tr>
+<tr><th scope="row"><strong>Burst error</strong></th><td>ผิดหลายบิตติดกันเป็นช่วง ของจริงบนสายส่วนใหญ่เป็นแบบนี้</td></tr>
+<tr><th scope="row"><strong>Redundancy</strong></th><td>บิตซ้ำซ้อนที่แนบไปกับข้อมูลเพื่อให้ผู้รับตรวจเองได้ แล้วทิ้งหลังตรวจเสร็จ</td></tr>
+<tr><th scope="row"><strong>Block coding</strong></th><td>หั่นข้อมูลเป็นบล็อก แนบบิตตรวจสอบต่อบล็อก</td></tr>
+<tr><th scope="row"><strong>Dataword / Codeword</strong></th><td>Dataword = ข้อมูลเดิม k บิต · Codeword = ข้อมูล+redundancy รวม n บิต โดย n = k + r</td></tr>
+<tr><th scope="row"><strong>ARQ</strong></th><td>Automatic Repeat reQuest ตรวจพบ error แล้วขอส่งใหม่</td></tr>
+<tr><th scope="row"><strong>FEC</strong></th><td>Forward Error Correction แนบ redundancy มากพอให้ผู้รับซ่อมเองโดยไม่ต้องส่งใหม่</td></tr>
+<tr><th scope="row"><strong>Parity check</strong></th><td>เติม 1 บิตให้จำนวนบิต 1 เป็นคู่ (even) หรือคี่ (odd) จับ error จำนวนคี่ได้ แต่จับจำนวนคู่ไม่ได้</td></tr>
+<tr><th scope="row"><strong>Syndrome</strong></th><td>ค่าที่ผู้รับคำนวณจาก codeword ที่ได้รับ = 0 แปลว่าไม่มี error ≠ 0 แปลว่ามี error ใน Hamming syndrome คือตำแหน่งบิตที่ผิด</td></tr>
+<tr><th scope="row"><strong>2D parity</strong></th><td>ตรวจ parity ทั้งแถวและหลัก หาจุดตัดของแถวกับหลักที่ผิดได้ จึงแก้ได้ 1 บิต</td></tr>
+<tr><th scope="row"><strong>Checksum</strong></th><td>แบ่งข้อมูลเป็นชุด m บิต บวกแบบ one's complement (ตัวทดวนกลับมาบวก) แล้ว complement ส่งไปด้วย ผู้รับบวกรวมแล้วได้ 0 = ปกติ ใช้ใน IPv4 header, TCP, UDP</td></tr>
+<tr><th scope="row"><strong>One's complement</strong></th><td>การบวกที่เอาตัวทดล้นมาบวกกลับท้ายสุด แล้วกลับบิตผลลัพธ์</td></tr>
+<tr><th scope="row"><strong>CRC</strong></th><td>Cyclic Redundancy Check หารด้วย divisor แบบ modulo-2 (XOR) ตกลงกันไว้ เศษที่ได้ (CRC) ต่อท้ายข้อมูล แม่นสุดสำหรับ burst error ใช้เป็น FCS ของ Ethernet</td></tr>
+<tr><th scope="row"><strong>Divisor / Generator</strong></th><td>ตัวหารที่ตกลงกันไว้ของ CRC CRC มีบิตน้อยกว่า divisor 1 บิตเสมอ</td></tr>
+<tr><th scope="row"><strong>Modulo-2 division</strong></th><td>การหารไบนารีที่ลบ = XOR (ไม่มีตัวยืม)</td></tr>
+<tr><th scope="row"><strong>Hamming code</strong></th><td>วาง parity bit ที่ตำแหน่งกำลังสอง (1, 2, 4, 8) แต่ละตัวคุมคนละกลุ่มบิต แก้ error ได้ 1 บิต อ่านตำแหน่งจาก (r8 r4 r2 r1)</td></tr>
+<tr><th scope="row"><strong>Interleaving</strong></th><td>สลับลำดับบิตระหว่างหลาย codeword ก่อนส่ง เพื่อให้ burst error กลายเป็น error 1 บิตต่อ codeword แล้วใช้ Hamming ซ่อมได้</td></tr>
+</tbody></table></section><section id="s4"><h2>🚦 Lecture 5.2 — Flow Control, ARQ, HDLC <small>27 คำ</small></h2><table><thead><tr><th>ศัพท์</th><th>คืออะไร</th></tr></thead><tbody>
+<tr><th scope="row"><strong>Flow control</strong></th><td>คุมอัตราส่งของ sender ไม่ให้ผู้รับรับไม่ทันจนบัฟเฟอร์ล้น</td></tr>
+<tr><th scope="row"><strong>Error control</strong></th><td>ตรวจจับ error และจัดการ (ส่งซ้ำ) เมื่อ frame เสียหายหรือหาย</td></tr>
+<tr><th scope="row"><strong>Buffer</strong></th><td>ที่พักข้อมูลชั่วคราว ฝั่ง sender เก็บ frame ที่รอส่ง/ส่งซ้ำ ฝั่ง receiver เก็บ frame ที่รอส่งต่อชั้นบน</td></tr>
+<tr><th scope="row"><strong>ACK / NAK</strong></th><td>ACK = ยืนยันรับ frame ถูกต้อง · NAK = แจ้งให้ส่ง frame นั้นใหม่</td></tr>
+<tr><th scope="row"><strong>Timer / Timeout</strong></th><td>sender จับเวลารอ ACK ถ้าไม่มา ถือว่า frame หาย ต้องส่งซ้ำ</td></tr>
+<tr><th scope="row"><strong>Sequence number</strong></th><td>เลขกำกับ frame เพื่อแยก frame ใหม่กับ frame ซ้ำ ใช้ m บิต = เลข 0 ถึง 2^m − 1 แล้ววนกลับ</td></tr>
+<tr><th scope="row"><strong>Simple protocol</strong></th><td>ไม่มี flow control และ error control</td></tr>
+<tr><th scope="row"><strong>Stop-and-Wait ARQ</strong></th><td>ส่งทีละ 1 frame รอ ACK ก่อนส่งตัวต่อไป ใช้เลข 0 กับ 1 สลับกัน ง่ายแต่ช้า ไม่ใช้ประโยชน์ลิงก์เร็ว/หน่วงนาน</td></tr>
+<tr><th scope="row"><strong>S และ R (Stop-and-Wait)</strong></th><td>S = เลขของ frame ที่กำลังส่ง ฝั่ง sender · R = เลขของ frame ถัดไปที่ receiver รอรับ ACK n = frame ก่อน n ครบแล้ว รอ frame n</td></tr>
+<tr><th scope="row"><strong>Pipelining</strong></th><td>ส่งหลาย frame ต่อเนื่องโดยไม่ต้องรอ ACK ทีละตัว (GBN และ SR ใช้ · Stop-and-Wait ไม่ใช้)</td></tr>
+<tr><th scope="row"><strong>Sliding window</strong></th><td>หน้าต่างที่กำหนดจำนวน frame ที่ส่งค้างได้ เมื่อได้ ACK หน้าต่างเลื่อนไปข้างหน้า</td></tr>
+<tr><th scope="row"><strong>Sf / Sn / R (Sliding window)</strong></th><td>Sf = frame แรกสุดที่ส่งแล้วยังไม่ได้ ACK · Sn = frame ถัดไปที่จะส่ง · R (Rn) = frame ที่ receiver รอรับ</td></tr>
+<tr><th scope="row"><strong>Outstanding frame</strong></th><td>frame ที่ส่งไปแล้วแต่ยังไม่ได้ ACK sender ต้องเก็บสำเนาไว้</td></tr>
+<tr><th scope="row"><strong>Go-Back-N ARQ</strong></th><td>ส่ง pipeline ได้ sender window ไม่เกิน 2^m − 1 receiver window = 1 รับเฉพาะ frame ที่รอ ตัวที่มาผิดลำดับทิ้ง ถ้า timeout ส่งซ้ำตั้งแต่ frame เก่าสุดที่ไม่ได้ ACK ไปทั้งหมด</td></tr>
+<tr><th scope="row"><strong>Cumulative ACK</strong></th><td>ACK n แปลว่า frame ก่อน n ครบทั้งหมดแล้ว และรอ frame n ใช้ใน GBN</td></tr>
+<tr><th scope="row"><strong>Selective Repeat ARQ</strong></th><td>รับ frame ผิดลำดับได้และเก็บ buffer ส่งซ้ำเฉพาะ frame ที่หายหรือเสีย window ของทั้งสองฝั่งไม่เกิน 2^(m−1) แต่ละ frame มี timer แยก</td></tr>
+<tr><th scope="row"><strong>Individual ACK</strong></th><td>ACK ทีละ frame ที่รับถูกต้อง ใช้ใน Selective Repeat</td></tr>
+<tr><th scope="row"><strong>Piggybacking</strong></th><td>ส่ง ACK ติดไปกับ data frame ที่วิ่งสวนทางกัน เพื่อประหยัด</td></tr>
+<tr><th scope="row"><strong>Bandwidth-delay product</strong></th><td>bandwidth x round-trip delay = จำนวนบิตที่ส่งได้ระหว่างรอ ACK ใช้วัดว่า window ควรใหญ่เท่าไร</td></tr>
+<tr><th scope="row"><strong>Link utilization</strong></th><td>ส่งจริงหารด้วย bandwidth-delay product Stop-and-Wait ต่ำมาก (เช่น 5%) GBN สูงกว่าตามขนาด window</td></tr>
+<tr><th scope="row"><strong>HDLC</strong></th><td>โปรโตคอล bit-oriented มาตรฐาน ใช้ flag + bit stuffing มี flow/error control ด้วย sequence number และ ACK ทำงานได้ทั้ง half และ full duplex</td></tr>
+<tr><th scope="row"><strong>NRM / ABM</strong></th><td>โหมดของ HDLC: Normal Response Mode (secondary ต้องรอ primary สั่งก่อนจึงส่งได้) · Asynchronous Balanced Mode (สองฝั่งเท่ากัน ส่งเองได้)</td></tr>
+<tr><th scope="row"><strong>I-frame / S-frame / U-frame</strong></th><td>Information (ข้อมูล+ACK piggyback) · Supervisory (คุม flow/error control อย่างเดียว) · Unnumbered (จัดการ session เช่น connect/disconnect)</td></tr>
+<tr><th scope="row"><strong>P/F bit</strong></th><td>Poll/Final primary ส่งเป็น Poll, secondary ตอบเป็น Final</td></tr>
+<tr><th scope="row"><strong>N(S) / N(R)</strong></th><td>เลข frame ที่ส่ง / เลข ACK ที่ piggyback ไปด้วย</td></tr>
+<tr><th scope="row"><strong>RR / RNR / REJ / SREJ</strong></th><td>S-frame: Receiver Ready (ACK ปกติ) · Receiver Not Ready (ACK แต่ช้าลงหน่อย) · Reject (NAK ของ Go-Back-N) · Selective Reject (NAK ของ Selective Repeat)</td></tr>
+<tr><th scope="row"><strong>Connectionless / Connection-oriented</strong></th><td>ไม่ต้อง/ต้องตั้ง connection ก่อนส่ง ส่วนแบบมี connection ติดตาม sequence number, ACK, flow state HDLC รองรับทั้งสอง</td></tr>
+</tbody></table></section><section id="s5"><h2>📡 Lecture 6.1 — Media Access Control (MAC) <small>29 คำ</small></h2><table><thead><tr><th>ศัพท์</th><th>คืออะไร</th></tr></thead><tbody>
+<tr><th scope="row"><strong>Simplex</strong></th><td>ส่งทางเดียว เช่น ทีวี วิทยุ รีโมต</td></tr>
+<tr><th scope="row"><strong>Half-duplex</strong></th><td>ส่งหรือรับได้ทีละทิศบนสื่อที่แชร์ เช่น WLAN และ hub</td></tr>
+<tr><th scope="row"><strong>Full-duplex</strong></th><td>ส่งและรับพร้อมกันได้ เช่น Ethernet switch</td></tr>
+<tr><th scope="row"><strong>Physical / Logical topology</strong></th><td>การเชื่อมต่อจริงของอุปกรณ์ / การเชื่อมต่อเชิงตรรกะตาม interface และ IP</td></tr>
+<tr><th scope="row"><strong>Multiple access protocol</strong></th><td>กติกาควบคุมว่าใครส่งได้เมื่อไรบนช่องแชร์ เพื่อลดการชน</td></tr>
+<tr><th scope="row"><strong>Collision</strong></th><td>สถานีสองเครื่องขึ้นไปส่งพร้อมกัน สัญญาณเสียหาย</td></tr>
+<tr><th scope="row"><strong>Contention-based (Random access)</strong></th><td>แย่งกันส่งเอง ไม่มีตัวจัดคิว ง่าย เหมาะกับ traffic เบาถึงปานกลาง แต่แย่เมื่อโหลดหนัก เช่น ALOHA, CSMA</td></tr>
+<tr><th scope="row"><strong>Controlled access</strong></th><td>ต้องได้รับอนุญาตก่อนส่ง ทุกคนมีตาส่ง (Reservation, Polling, Token passing)</td></tr>
+<tr><th scope="row"><strong>Channelization</strong></th><td>แบ่งแบนด์วิดท์ของลิงก์ให้แต่ละสถานี (FDMA, TDMA, CDMA, OFDMA)</td></tr>
+<tr><th scope="row"><strong>ALOHA</strong></th><td>random access แรกสุด (ต้นทศวรรษ 1970) ใครมี frame ก็ส่งเลย ไม่ sense carrier ไม่ตรวจชน ส่งแล้วรอ ACK ถ้าไม่มาในเวลาที่กำหนด (2 เท่า max propagation delay) ส่งใหม่หลังรอเวลาสุ่ม</td></tr>
+<tr><th scope="row"><strong>Pure ALOHA / Slotted ALOHA</strong></th><td>Pure ส่งได้ทุกเมื่อ · Slotted แบ่งเวลาเป็น slot ส่งได้เฉพาะต้น slot ทำให้ vulnerable time สั้นลง (Pure = 2 เท่าของเวลาส่ง frame, Slotted = 1 เท่า)</td></tr>
+<tr><th scope="row"><strong>Vulnerable time</strong></th><td>ช่วงเวลาที่อาจเกิดการชน</td></tr>
+<tr><th scope="row"><strong>CSMA</strong></th><td>Carrier Sense Multiple Access ฟังสื่อก่อนส่ง ลดการชนแต่ไม่หมด เพราะ propagation delay ทำให้ช่องดูว่างทั้งที่มีคนเริ่มส่งแล้ว</td></tr>
+<tr><th scope="row"><strong>Persistence strategy</strong></th><td>พฤติกรรมเมื่อเจอช่องไม่ว่าง: Non-persistent (รอสุ่มแล้วฟังใหม่) · 1-persistent (ฟังต่อเนื่อง ว่างเมื่อไรส่งทันที) · p-persistent (ว่างแล้วส่งด้วยความน่าจะเป็น p)</td></tr>
+<tr><th scope="row"><strong>CSMA/CD</strong></th><td>เพิ่มการตรวจจับการชน (Collision Detection) ส่งไปด้วยฟังไปด้วย ถ้าชนก็หยุดแล้ว backoff แล้วส่งใหม่ ใช้ใน Ethernet แบบ bus/hub (half-duplex)</td></tr>
+<tr><th scope="row"><strong>Exponential backoff</strong></th><td>หลังชนรอเวลาสุ่มระหว่าง 0 ถึง (2^N − 1) x เวลา (N = จำนวนครั้งที่พยายาม) ยิ่งชนซ้ำยิ่งรอนาน</td></tr>
+<tr><th scope="row"><strong>CSMA/CA</strong></th><td>หลีกเลี่ยงการชน (Collision Avoidance) ไม่ตรวจชน ฟังช่อง รอ IFS แล้วรอ contention window สุ่ม แล้วส่ง รอ ACK ใช้ใน Wi-Fi (802.11)</td></tr>
+<tr><th scope="row"><strong>IFG / IFS</strong></th><td>Interframe gap/space ช่วงเวลารอหลังพบว่าช่องว่าง ค่ายิ่งสูง priority ยิ่งต่ำ</td></tr>
+<tr><th scope="row"><strong>Contention window</strong></th><td>ช่วงเวลาที่แบ่งเป็น slot สถานีสุ่มจำนวน slot ที่จะรอ ขนาดเพิ่มเป็นสองเท่าทุกครั้งที่ช่องไม่ว่าง (binary exponential backoff) และหยุดนับเมื่อช่องไม่ว่าง</td></tr>
+<tr><th scope="row"><strong>RTS / CTS</strong></th><td>Request to Send / Clear to Send ข้อความขอจองช่อง และอนุญาตให้ส่ง ใน CSMA/CA</td></tr>
+<tr><th scope="row"><strong>NAV</strong></th><td>Network Allocation Vector ตัวจับเวลาที่สถานีอื่นตั้งตามช่วงเวลาที่ RTS ขอจอง เพื่อไม่ฟังช่องจนกว่าจะหมดเวลา</td></tr>
+<tr><th scope="row"><strong>DCF / DIFS / SIFS</strong></th><td>Distributed Coordination Function (กลไก MAC ของ Wi-Fi) · DCF Interframe Spacing · Short Interframe Space (สั้นกว่า ใช้ตอบ ACK/CTS)</td></tr>
+<tr><th scope="row"><strong>Reservation</strong></th><td>มี reservation frame นำหน้า มี minislot ให้ N สถานี ใครจะส่งต้องจองช่องของตัวเอง แล้วส่งตามลำดับหลังช่วงจอง</td></tr>
+<tr><th scope="row"><strong>Polling</strong></th><td>มี primary (master) คอยถามแต่ละ secondary (slave) ทีละตัวว่ามีข้อมูลจะส่งไหม ทุกการสื่อสารผ่าน primary (select และ poll)</td></tr>
+<tr><th scope="row"><strong>Token passing</strong></th><td>สถานีเรียงเป็นวงแหวน ส่ง token วนไป ใครถือ token จึงส่งได้ (เช่น Token Ring)</td></tr>
+<tr><th scope="row"><strong>FDMA</strong></th><td>แบ่งตามความถี่ แต่ละสถานีได้ย่านของตัวเอง ใช้ในโทรศัพท์มือถือและดาวเทียม</td></tr>
+<tr><th scope="row"><strong>TDMA</strong></th><td>แบ่งตามเวลา แต่ละสถานีได้ time slot ของตัวเอง</td></tr>
+<tr><th scope="row"><strong>CDMA</strong></th><td>ทุกสถานีส่งพร้อมกันในความถี่เดียว แต่แยกกันด้วยรหัส (orthogonal code)</td></tr>
+<tr><th scope="row"><strong>OFDMA</strong></th><td>แบ่งเป็น subcarrier ย่อยที่ตั้งฉากกัน (orthogonal) แจกจ่ายให้หลายผู้ใช้ ใช้ใน 4G/5G และ Wi-Fi 6</td></tr>
+</tbody></table></section><section id="s6"><h2>🔌 Lecture 6.2 — Ethernet <small>26 คำ</small></h2><table><thead><tr><th>ศัพท์</th><th>คืออะไร</th></tr></thead><tbody>
+<tr><th scope="row"><strong>Ethernet / IEEE 802.3</strong></th><td>มาตรฐาน LAN ที่รวม data link และ physical layer ไว้ด้วยกัน เกิดที่ Xerox PARC (Metcalfe) แรงบันดาลใจจาก ALOHAnet กลายเป็น 802.3 ปี 1983</td></tr>
+<tr><th scope="row"><strong>IEEE Project 802</strong></th><td>โครงการรวมมาตรฐาน LAN ของ physical และ data link layer</td></tr>
+<tr><th scope="row"><strong>Connectionless service</strong></th><td>Ethernet ส่ง frame แต่ละอันอิสระ ไม่ตั้ง/ไม่ปิด connection ไม่มี flow control (ปล่อยให้ TCP จัดการ) ไม่รู้ว่า frame ตก</td></tr>
+<tr><th scope="row"><strong>Preamble</strong></th><td>7 ไบต์ 0/1 สลับกัน ใช้ซิงก์ clock ผู้รับ เพิ่มที่ physical layer</td></tr>
+<tr><th scope="row"><strong>SFD</strong></th><td>Start Frame Delimiter 1 ไบต์ 10101011 บอกจุดเริ่มต้น frame</td></tr>
+<tr><th scope="row"><strong>DA / SA</strong></th><td>Destination / Source Address ที่อยู่ปลายทาง/ต้นทาง ยาว 6 ไบต์ (48 บิต)</td></tr>
+<tr><th scope="row"><strong>Type field</strong></th><td>บอกว่าข้อมูลข้างในเป็น protocol ชั้นบนอะไร เช่น IP, ARP</td></tr>
+<tr><th scope="row"><strong>Data / Padding</strong></th><td>ข้อมูลขนาด 46 ถึง 1500 ไบต์ ถ้าสั้นไปต้องเติม 0 (padding) ให้ถึงขั้นต่ำ</td></tr>
+<tr><th scope="row"><strong>CRC-32 (FCS)</strong></th><td>ตรวจ error ท้าย frame ครอบคลุม address, type, data ถ้าผิดผู้รับทิ้ง frame เงียบๆ</td></tr>
+<tr><th scope="row"><strong>ขนาด frame</strong></th><td>ต่ำสุด 64 ไบต์ (512 บิต) เพื่อรองรับ CSMA/CD สูงสุด 1518 ไบต์ (header+trailer = 18 ไบต์ ดังนั้น payload 46–1500)</td></tr>
+<tr><th scope="row"><strong>MAC address</strong></th><td>ที่อยู่ link layer 48 บิต เขียนเป็น hex เช่น 4A:30:10:21:10:1A 24 บิตแรก = OUI ที่ IEEE กำหนดให้ผู้ผลิต 24 บิตหลังผู้ผลิตกำหนดเอง</td></tr>
+<tr><th scope="row"><strong>NIC</strong></th><td>Network Interface Card การ์ดเครือข่ายที่ให้ MAC address แก่สถานี</td></tr>
+<tr><th scope="row"><strong>Unicast / Multicast / Broadcast</strong></th><td>ส่งหาเครื่องเดียว / ส่งหากลุ่ม / ส่งหาทุกเครื่อง (FF:FF:FF:FF:FF:FF) multicast ใช้เป็นปลายทางเท่านั้น ต้นทางเป็น unicast เสมอ</td></tr>
+<tr><th scope="row"><strong>MAC vs IP ระหว่างทาง</strong></th><td>IP ต้นทาง/ปลายทางไม่เปลี่ยน แต่ MAC address เปลี่ยนทุก hop</td></tr>
+<tr><th scope="row"><strong>Default gateway</strong></th><td>router ที่ host ส่ง frame ไปหาเมื่อปลายทางอยู่นอก LAN (ใช้ MAC ของ gateway)</td></tr>
+<tr><th scope="row"><strong>Standard Ethernet</strong></th><td>10 Mbps บน bus/hub ใช้ CSMA/CD แบบ 1-persistent frame ขั้นต่ำ 64 ไบต์เพราะต้องตรวจชนได้ทันก่อนส่งจบ สายยาวสุดราว 2500 เมตร</td></tr>
+<tr><th scope="row"><strong>Fast Ethernet</strong></th><td>100 Mbps frame ขั้นต่ำยัง 64 ไบต์ แบบ hub สายยาวสุดลดเหลือ 250 เมตร (ใช้จริง 100 เมตร) แบบ switch ไม่ต้อง CSMA/CD</td></tr>
+<tr><th scope="row"><strong>Gigabit Ethernet</strong></th><td>1 Gbps (IEEE 802.3z) ไม่มี hub ใช้ switch+full-duplex จึงไม่ชน มี Carrier Extension (ขยาย frame ขั้นต่ำเป็น 512 ไบต์) และ Frame Bursting (รวมหลาย frame เป็นก้อนใหญ่)</td></tr>
+<tr><th scope="row"><strong>Autonegotiation</strong></th><td>อุปกรณ์สองฝั่งต่อรองความเร็วและ duplex ที่ดีที่สุดเอง</td></tr>
+<tr><th scope="row"><strong>Auto-MDIX</strong></th><td>switch ตรวจชนิดสาย (straight-through หรือ crossover) เองแล้วปรับพอร์ต ไม่ใช่เรื่องเดียวกับ autonegotiation</td></tr>
+<tr><th scope="row"><strong>Collision domain</strong></th><td>ขอบเขตที่การส่งพร้อมกันจะชนกัน switch แยก collision domain ต่อ 1 พอร์ต</td></tr>
+<tr><th scope="row"><strong>Switch learning</strong></th><td>switch ดู source MAC ของ frame ที่เข้ามา แล้วจดลง MAC address table พร้อมเลขพอร์ต (เก็บราว 5 นาที) ถ้า MAC เดิมมาจากพอร์ตใหม่ อัปเดตเป็นพอร์ตใหม่</td></tr>
+<tr><th scope="row"><strong>Filtering / Forwarding</strong></th><td>ถ้า destination MAC อยู่ในตาราง ส่งออกพอร์ตที่ตรงกันเท่านั้น</td></tr>
+<tr><th scope="row"><strong>Flooding / Unknown unicast</strong></th><td>ถ้า destination ไม่อยู่ในตาราง (unknown unicast) หรือเป็น broadcast/multicast ส่งออกทุกพอร์ตยกเว้นพอร์ตที่เข้ามา</td></tr>
+<tr><th scope="row"><strong>Store-and-forward switch</strong></th><td>รับ frame ครบ ตรวจ CRC แล้วจึงส่งต่อ จำเป็นสำหรับ QoS</td></tr>
+<tr><th scope="row"><strong>Cut-through switch</strong></th><td>เริ่มส่งต่อเมื่ออ่าน destination address ได้ ไม่ต้องรอครบ เร็วกว่า มี 2 แบบ: fast-forward (พื้นฐาน) และ fragment-free (ตรวจ 64 ไบต์แรกก่อน)</td></tr>
+</tbody></table></section><section id="s7"><h2>🧭 Lecture 7 — ARP, Switch, STP, VLAN <small>30 คำ</small></h2><table><thead><tr><th>ศัพท์</th><th>คืออะไร</th></tr></thead><tbody>
+<tr><th scope="row"><strong>ARP</strong></th><td>Address Resolution Protocol แปลง IP address เป็น MAC address ใน LAN แบบ request-response ข้อความถูกห่อใน link layer frame โดยตรง</td></tr>
+<tr><th scope="row"><strong>ARP request / reply</strong></th><td>Request = broadcast ถามทุกเครื่อง (ช่อง MAC ปลายทางเป็น 0 ทั้งหมด) · Reply = เครื่องเจ้าของ IP ตอบกลับตรงถึงผู้ถาม</td></tr>
+<tr><th scope="row"><strong>ARP cache</strong></th><td>ตารางจับคู่ IP กับ MAC ที่ OS เก็บไว้ Dynamic (ARP สร้างเอง หมดอายุ) หรือ Static (ตั้งเองถาวร) ดูได้ด้วย <code>arp -a</code></td></tr>
+<tr><th scope="row"><strong>Repeater</strong></th><td>อุปกรณ์ physical layer ที่สร้างสัญญาณใหม่ (regenerate) ไม่ใช่ขยาย ช่วยต่อสายให้ไกลขึ้น</td></tr>
+<tr><th scope="row"><strong>Hub</strong></th><td>repeater หลายพอร์ต ส่ง frame ออกทุกพอร์ตยกเว้นพอร์ตที่เข้ามา ไม่มี MAC address ไม่กรอง ไม่ฉลาด</td></tr>
+<tr><th scope="row"><strong>Bridge</strong></th><td>อุปกรณ์ data link layer มี 2 พอร์ต มีตารางเพื่อกรอง (filtering) ไม่แก้ MAC ใน frame</td></tr>
+<tr><th scope="row"><strong>Switch</strong></th><td>bridge หลายพอร์ตที่เรียนรู้เองได้ (self-learning) แยก collision domain ทีละพอร์ต ทำงานทั้ง physical และ data link</td></tr>
+<tr><th scope="row"><strong>Transparent switch</strong></th><td>switch ที่เครื่องในเครือข่ายไม่รู้ว่ามีอยู่ (IEEE 802.1d) ต้อง: ส่งต่อ frame ได้, อัปเดตตารางเองจากการเรียนรู้, และป้องกัน loop</td></tr>
+<tr><th scope="row"><strong>Loop problem</strong></th><td>มี switch สำรองหลายตัว ทำให้เกิดเส้นทางวนลูป frame ซ้ำเพิ่มไม่หยุด เพราะ Ethernet frame ไม่มี TTL</td></tr>
+<tr><th scope="row"><strong>STP</strong></th><td>Spanning Tree Protocol (IEEE 802.1d) ให้ switch คุยกันแล้วสร้างโครงสร้างต้นไม้ไม่มี loop ด้วยการบล็อกลิงก์สำรอง</td></tr>
+<tr><th scope="row"><strong>Root switch (Root bridge)</strong></th><td>switch ที่มี ID ต่ำสุด ถูกเลือกเป็นรากของต้นไม้</td></tr>
+<tr><th scope="row"><strong>Cost / Shortest path</strong></th><td>ค่าใช้จ่ายของแต่ละลิงก์ (ในสไลด์ใช้ hop count) หาเส้นทางต้นทุนต่ำสุดจาก root ไปทุกโหนด (ใช้ Dijkstra)</td></tr>
+<tr><th scope="row"><strong>Forwarding port / Blocking port</strong></th><td>พอร์ตที่อยู่ในต้นไม้ ส่งต่อ frame ปกติ / พอร์ตนอกต้นไม้ บล็อก frame เพื่อกัน loop แต่เก็บลิงก์ไว้เป็นเส้นทางสำรอง</td></tr>
+<tr><th scope="row"><strong>VLAN</strong></th><td>Virtual LAN แบ่งกลุ่มอุปกรณ์เชิงตรรกะบน switch ตัวเดียวหรือหลายตัว 1 VLAN = 1 broadcast domain = ปกติ 1 IP subnet</td></tr>
+<tr><th scope="row"><strong>Broadcast domain</strong></th><td>ขอบเขตที่ broadcast ไปถึง VLAN แบ่งให้เล็กลง ลด traffic</td></tr>
+<tr><th scope="row"><strong>Benefits ของ VLAN</strong></th><td>broadcast domain เล็กลง, ปลอดภัยขึ้น (คุยได้เฉพาะ VLAN เดียวกัน), จัดการง่าย, ประหยัด (switch ตัวเดียวรองรับหลายกลุ่ม), performance ดีขึ้น</td></tr>
+<tr><th scope="row"><strong>Access port</strong></th><td>พอร์ตที่ต่ออุปกรณ์ปลายทาง อยู่ใน data VLAN เดียว frame ออกจากพอร์ตไม่มี 802.1Q tag (ใน Netgear เรียก Untagged)</td></tr>
+<tr><th scope="row"><strong>Trunk</strong></th><td>ลิงก์จุดต่อจุดระหว่างอุปกรณ์ ที่ส่ง traffic ของหลาย VLAN พร้อมกัน ใช้ tagging 802.1Q (ใน Netgear เรียก Tagged)</td></tr>
+<tr><th scope="row"><strong>IEEE 802.1Q tag</strong></th><td>tag ยาว 4 ไบต์ใน frame: TPID 0x8100 (2 ไบต์), User priority (3 บิต), CFI (1 บิต), VLAN ID (12 บิต รองรับ 4096 VLAN) ใส่แล้วต้องคำนวณ FCS ใหม่ และดึง tag ออกก่อนส่งถึงเครื่องปลายทาง</td></tr>
+<tr><th scope="row"><strong>Default VLAN</strong></th><td>VLAN 1 เป็นทั้ง default, native และ management VLAN ลบหรือเปลี่ยนชื่อไม่ได้</td></tr>
+<tr><th scope="row"><strong>Native VLAN</strong></th><td>ใช้กับ trunk เท่านั้น frame ของ native VLAN จะไม่ถูกติด tag บน trunk</td></tr>
+<tr><th scope="row"><strong>Data VLAN</strong></th><td>VLAN สำหรับ traffic ของผู้ใช้ เช่น เว็บและอีเมล</td></tr>
+<tr><th scope="row"><strong>Management VLAN</strong></th><td>VLAN สำหรับจัดการอุปกรณ์ (SSH/Telnet) ปกติคือ SVI ของ switch ไม่ควรปนกับ traffic ผู้ใช้</td></tr>
+<tr><th scope="row"><strong>Voice VLAN</strong></th><td>VLAN แยกสำหรับ IP phone โทรศัพท์ติด tag traffic เสียงเอง พร้อมค่า CoS (QoS ระดับ layer 2) switch แจ้ง voice VLAN ผ่าน CDP</td></tr>
+<tr><th scope="row"><strong>SVI</strong></th><td>Switched Virtual Interface อินเทอร์เฟซเสมือนของ VLAN บน switch ใช้ให้ switch มี IP เพื่อจัดการ</td></tr>
+<tr><th scope="row"><strong>Normal / Extended range VLAN</strong></th><td>Normal = VLAN 1–1005 (เก็บใน vlan.dat) · Extended = 1006–4095 (ผู้ให้บริการใช้ เก็บใน running-config)</td></tr>
+<tr><th scope="row"><strong>VTP</strong></th><td>VLAN Trunking Protocol ซิงก์ข้อมูล VLAN ระหว่าง switch (normal range)</td></tr>
+<tr><th scope="row"><strong>Inter-VLAN routing</strong></th><td>VLAN ต่างกันคุยกันต้องผ่านอุปกรณ์ layer 3 (router หรือ layer 3 switch) ที่เป็น gateway ของแต่ละ VLAN</td></tr>
+<tr><th scope="row"><strong>PVID</strong></th><td>Port VLAN ID VLAN ที่ frame ไม่มี tag ที่เข้าพอร์ตนั้นจะถูกจัดเข้า (ตั้งให้ตรงกับ VLAN ของพอร์ต)</td></tr>
+<tr><th scope="row"><strong>คำสั่ง VLAN ที่ควรรู้</strong></th><td><code>vlan [id]</code> + <code>name</code> สร้าง VLAN · <code>switchport mode access</code> + <code>switchport access vlan [id]</code> กำหนดพอร์ต · <code>switchport mode trunk</code> + <code>switchport trunk native vlan</code> / <code>allowed vlan</code> ตั้ง trunk · <code>show vlan brief</code> ตรวจสอบ · <code>no vlan [id]</code> ลบ</td></tr>
+</tbody></table><p class="note">⚠️ EtherChannel (ตาม syllabus สัปดาห์ 8) ไม่มีอยู่ในสไลด์ Lecture 7 ที่มี จึงยังไม่ได้ใส่ในคลังนี้ ถ้ามีสไลด์ส่งมาเพิ่ม จะเติมให้</p></section><section id="s8"><h2>Quiz คำศัพท์ <small>43 คำ</small></h2><table><thead><tr><th>ศัพท์</th><th>คืออะไร</th></tr></thead><tbody>
+<tr><th scope="row"><strong>Parity Check</strong></th><td>เติม parity bit 1 บิตท้ายข้อมูลให้จำนวนบิต 1 เป็นคู่ (even parity) หรือคี่ (odd parity) จับ error จำนวนคี่บิตได้ แต่ error จำนวนคู่บิตจับไม่ได้</td></tr>
+<tr><th scope="row"><strong>Checksum</strong></th><td>แบ่งข้อมูลเป็นชุด m บิต บวกกันแบบ one's complement แล้ว complement ผลรวมส่งไปด้วย ผู้รับบวกทุกชุดรวมกับ checksum ได้ 0 = ปกติ (ใช้ใน IPv4, TCP, UDP)</td></tr>
+<tr><th scope="row"><strong>CRC</strong></th><td>Cyclic Redundancy Check หารข้อมูลด้วย divisor แบบ modulo-2 (XOR) เอาเศษต่อท้ายเป็น FCS จับ burst error ได้ดีที่สุด ใช้เป็น FCS ของ Ethernet</td></tr>
+<tr><th scope="row"><strong>Syndrome</strong></th><td>ค่าที่ผู้รับคำนวณจาก codeword ที่ได้รับ = 0 แปลว่าไม่มี error ไม่ใช่ 0 แปลว่ามี error (ใน Hamming code ค่านี้บอกตำแหน่งบิตที่ผิด)</td></tr>
+<tr><th scope="row"><strong>Framing</strong></th><td>การแบ่งสตรีมบิตเป็น frame โดยกำหนดจุดเริ่ม–จุดจบ เพื่อให้ผู้รับแยกแต่ละ frame ออก เช่น ใช้ flag + stuffing หรือฟิลด์ความยาว</td></tr>
+<tr><th scope="row"><strong>Flow Control</strong></th><td>คุมอัตราส่งของ sender ไม่ให้เร็วเกินจน receiver รับไม่ทันหรือ buffer ล้น (เช่น Stop-and-Wait, Sliding Window)</td></tr>
+<tr><th scope="row"><strong>Error Control</strong></th><td>กลไกจัดการเมื่อ frame หายหรือเสีย โดยใช้ ACK + timeout + retransmission (คำตอบข้อ 1 ของโจทย์ในไฟล์)</td></tr>
+<tr><th scope="row"><strong>ACK</strong></th><td>Acknowledgment ข้อความที่ receiver ตอบกลับ ยืนยันว่ารับ frame ถูกต้อง ใน tutorial นี้ใช้ positive ACK เท่านั้น (Go-Back-N: ACK k = ได้รับครบถึง k−1 และรอ frame k)</td></tr>
+<tr><th scope="row"><strong>Stop-and-Wait ARQ</strong></th><td>ส่งทีละ 1 frame แล้วรอ ACK ก่อนส่ง frame ถัดไป ใช้เลข 0 กับ 1 สลับกัน ง่ายแต่ช้า ใช้ลิงก์ไม่คุ้ม</td></tr>
+<tr><th scope="row"><strong>Go-Back-N ARQ</strong></th><td>ส่งแบบ pipeline ได้ sender window ≤ 2^m − 1 แต่ receiver window = 1 frame ที่มาผิดลำดับจะถูกทิ้ง ถ้า timeout ส่งซ้ำตั้งแต่ frame ที่หายไปจนถึง frame ล่าสุดที่ส่ง</td></tr>
+<tr><th scope="row"><strong>Selective Repeat ARQ</strong></th><td>receiver เก็บ frame ที่มาผิดลำดับไว้ใน buffer ได้ และส่งซ้ำเฉพาะ frame ที่หายหรือเสีย window ทั้งสองฝั่ง ≤ 2^(m−1) ใช้ individual ACK</td></tr>
+<tr><th scope="row"><strong>Sliding Window</strong></th><td>หน้าต่างที่กำหนดว่าส่ง frame ค้างไว้ได้กี่ตัวโดยยังไม่ได้ ACK เมื่อได้ ACK หน้าต่างจะเลื่อนไปข้างหน้า</td></tr>
+<tr><th scope="row"><strong>Pipelining</strong></th><td>ส่งหลาย frame ต่อเนื่องโดยไม่ต้องรอ ACK ทีละตัว (Go-Back-N และ Selective Repeat ใช้ ส่วน Stop-and-Wait ไม่ใช้)</td></tr>
+<tr><th scope="row"><strong>CSMA/CD</strong></th><td>Carrier Sense Multiple Access with Collision Detection ฟังสื่อก่อนส่ง ส่งไปด้วยฟังไปด้วย ถ้าตรวจพบการชนก็หยุด แล้วรอ random backoff ก่อนส่งใหม่ ใช้ใน Ethernet แบบ bus/hub</td></tr>
+<tr><th scope="row"><strong>CSMA/CA</strong></th><td>Carrier Sense Multiple Access with Collision Avoidance ฟังสื่อก่อนส่งและใช้ random backoff เพื่อหลีกเลี่ยงการชน (ไม่ตรวจชน) รอ ACK หลังส่ง ใช้ใน WLAN / Wi-Fi</td></tr>
+<tr><th scope="row"><strong>ALOHA</strong></th><td>random access แบบแรกสุด มี frame ก็ส่งทันทีโดยไม่ฟังสื่อ ไม่ตรวจชน ถ้าไม่ได้ ACK ในเวลาที่กำหนดก็รอเวลาสุ่มแล้วส่งใหม่ (มี Pure และ Slotted)</td></tr>
+<tr><th scope="row"><strong>Polling</strong></th><td>controlled access แบบมีอุปกรณ์กลาง (primary) เรียกถามแต่ละ station ตามลำดับว่ามีข้อมูลจะส่งไหม</td></tr>
+<tr><th scope="row"><strong>Token Passing</strong></th><td>controlled access ที่สิทธิ์ในการส่งถูกส่งต่อกันด้วย control frame พิเศษที่เรียกว่า token ใครถือ token ถึงส่งได้ (เช่น Token Ring)</td></tr>
+<tr><th scope="row"><strong>Reservation</strong></th><td>controlled access ที่แต่ละ station ต้องจองช่วงเวลาส่งล่วงหน้าใน reservation frame ก่อน แล้วจึงส่งตามลำดับที่จอง</td></tr>
+<tr><th scope="row"><strong>FDMA</strong></th><td>Frequency Division Multiple Access channelization แบบแบ่งย่านความถี่ ให้แต่ละ station ได้ย่านของตัวเอง</td></tr>
+<tr><th scope="row"><strong>TDMA</strong></th><td>Time Division Multiple Access channelization แบบแบ่งเวลา ให้แต่ละ station ได้ time slot ของตัวเอง</td></tr>
+<tr><th scope="row"><strong>CDMA</strong></th><td>Code Division Multiple Access ทุก station ส่งพร้อมกันในช่วงเวลาและย่านความถี่เดียวกัน โดย receiver แยกผู้ใช้ด้วย orthogonal code (คำตอบข้อ 7)</td></tr>
+<tr><th scope="row"><strong>OFDMA</strong></th><td>Orthogonal Frequency Division Multiple Access แบ่งย่านความถี่เป็น subcarrier ย่อยที่ตั้งฉากกัน แล้วแจกจ่ายให้หลายผู้ใช้ ใช้ใน 4G/5G และ Wi-Fi 6</td></tr>
+<tr><th scope="row"><strong>Collision</strong></th><td>สอง station ขึ้นไปส่งบนสื่อแชร์เดียวกันพร้อมกัน สัญญาณชนกันจนข้อมูลเสียหาย ต้องส่งใหม่</td></tr>
+<tr><th scope="row"><strong>Two-Dimensional (2D) Even Parity</strong></th><td>ตรวจ even parity ทั้งแนวนอน (ต่อแถว) และแนวตั้ง (ต่อหลัก) ถ้ามี d datawords ยาว k บิต จะได้ block ขนาด (d+1)(k+1) บิต เช่น 3 แถว x 4 บิต = (3+1)(4+1) = 20 บิต (ข้อ 5)</td></tr>
+<tr><th scope="row"><strong>Dataword / Codeword</strong></th><td>Dataword = ข้อมูลเดิม k บิต · Codeword = ข้อมูลรวมบิต redundancy ที่เติม n = k + r บิต</td></tr>
+<tr><th scope="row"><strong>Sequence number (m bits) / Modulo</strong></th><td>เลขกำกับ frame ใช้ m บิตได้เลข 0 ถึง 2^m − 1 แล้ววนกลับ (modulo 2^m) เช่น m = 3 คือ modulo 8 เลข 0–7</td></tr>
+<tr><th scope="row"><strong>Sender window / Receiver window</strong></th><td>จำนวน frame สูงสุดที่ sender ส่งค้างได้ / ที่ receiver ยอมรับได้ Go-Back-N: sender ≤ 2^m − 1, receiver = 1 · Selective Repeat: ทั้งสองฝั่ง ≤ 2^(m−1) (m = 4 ได้ 8 ทั้งคู่ ข้อ 6)</td></tr>
+<tr><th scope="row"><strong>Sf / Sn / R</strong></th><td>Sf = frame แรกสุดที่ส่งแล้วยังไม่ได้ ACK · Sn = เลข frame ถัดไปที่จะส่ง · R = เลข frame ที่ receiver กำลังรอรับ</td></tr>
+<tr><th scope="row"><strong>Timer / Timeout</strong></th><td>sender จับเวลารอ ACK ถ้าหมดเวลาโดยไม่ได้ ACK ถือว่า frame หายหรือเสีย ต้องส่งซ้ำ</td></tr>
+<tr><th scope="row"><strong>Retransmission</strong></th><td>การส่ง frame เดิมซ้ำเมื่อ timeout หรือได้ NAK Go-Back-N ส่งซ้ำ frame ที่หายและทุก frame หลังมัน (ข้อ 9: ส่ง 5, 6, 7) · Selective Repeat ส่งซ้ำเฉพาะตัวที่หาย</td></tr>
+<tr><th scope="row"><strong>Positive cumulative ACK</strong></th><td>ACK แบบสะสมของ Go-Back-N ACK k แปลว่าได้รับ frame ถึง k−1 ครบตามลำดับและกำลังรอ frame k</td></tr>
+<tr><th scope="row"><strong>Positive individual ACK</strong></th><td>ACK ทีละ frame ของ Selective Repeat ACK k แปลว่าได้รับ frame k ถูกต้องแล้ว (ไม่ว่าจะมาตามลำดับหรือไม่)</td></tr>
+<tr><th scope="row"><strong>Duplicate ACK</strong></th><td>ACK ซ้ำเลขเดิม ใน Go-Back-N เมื่อ frame มาผิดลำดับ receiver จะส่ง cumulative ACK ล่าสุดซ้ำ (ข้อ 9: ACK 5, 5, 5)</td></tr>
+<tr><th scope="row"><strong>NAK</strong></th><td>Negative Acknowledgment ข้อความแจ้งว่า frame ที่คาดหวังยังไม่มา/เสีย ให้ sender ส่งใหม่ทันทีโดยไม่ต้องรอ timer (ข้อ 10 ใช้ NAK 5)</td></tr>
+<tr><th scope="row"><strong>Buffer</strong></th><td>ที่พักข้อมูลชั่วคราว sender เก็บสำเนา frame ที่ยังไม่ได้ ACK ส่วน receiver ของ Selective Repeat เก็บ frame ที่มาผิดลำดับไว้รอตัวที่ขาด</td></tr>
+<tr><th scope="row"><strong>Out-of-order frame</strong></th><td>frame ที่มาถึงผิดลำดับ (ข้ามเลขที่รออยู่) Go-Back-N ทิ้ง · Selective Repeat เก็บ buffer ไว้และตอบ ACK ของ frame นั้น</td></tr>
+<tr><th scope="row"><strong>Orthogonal code</strong></th><td>รหัสที่ตั้งฉากกัน (ผลคูณภายในเป็น 0) ใช้ใน CDMA ให้ผู้ใช้หลายคนส่งพร้อมกันได้แล้ว receiver แยกสัญญาณของแต่ละคนออกได้</td></tr>
+<tr><th scope="row"><strong>Random backoff</strong></th><td>การรอเวลาแบบสุ่มก่อนลองส่งใหม่ เพื่อไม่ให้หลาย station กลับมาส่งพร้อมกันอีก ใช้ใน CSMA/CD, CSMA/CA และ ALOHA</td></tr>
+<tr><th scope="row"><strong>Controlled access</strong></th><td>ต้องได้รับอนุญาตก่อนส่ง ทุก station มีตาส่ง ไม่แย่งกัน เช่น Polling, Token Passing, Reservation (ต่างจาก random access เช่น ALOHA, CSMA)</td></tr>
+<tr><th scope="row"><strong>Multiple access / MAC protocol</strong></th><td>กติกาที่กำหนดว่า station ไหนส่งได้เมื่อไรบนสื่อ (medium) ที่หลายเครื่องแชร์กัน เพื่อลด collision แบ่งเป็น random access, controlled access, channelization</td></tr>
+<tr><th scope="row"><strong>Medium</strong></th><td>สื่อ/ช่องสัญญาณที่ใช้ส่งข้อมูล เช่น สายทองแดง ใยแก้ว หรืออากาศ (ไร้สาย)</td></tr>
+<tr><th scope="row"><strong>Frame</strong></th><td>หน่วยข้อมูลของ Data Link Layer ประกอบด้วย header, payload และ trailer</td></tr>
+</tbody></table></section>
+  <p id="empty">ไม่พบศัพท์ที่ค้นหา</p>
+</main>
+<footer>ที่มา: Notion · <a href="https://github.com/Thinnaphat-tht/itds231-glossary">ดูบน GitHub</a></footer>
+<script>
+(function () {
+  var root = document.documentElement, KEY = "itds231-theme";
+  try { var saved = localStorage.getItem(KEY); if (saved) root.setAttribute("data-theme", saved); } catch (e) {}
+  document.getElementById("theme").addEventListener("click", function () {
+    var dark = root.getAttribute("data-theme") === "dark" ||
+      (!root.getAttribute("data-theme") && matchMedia("(prefers-color-scheme: dark)").matches);
+    var next = dark ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem(KEY, next); } catch (e) {}
+  });
+
+  var rows = Array.prototype.slice.call(document.querySelectorAll("tbody tr"));
+  var originals = rows.map(function (r) { return r.innerHTML; });
+  var secs = Array.prototype.slice.call(document.querySelectorAll("section"));
+  var empty = document.getElementById("empty");
+  function esc(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+  document.getElementById("q").addEventListener("input", function (e) {
+    var q = e.target.value.trim().toLowerCase(), shown = 0;
+    rows.forEach(function (r, i) {
+      r.innerHTML = originals[i];
+      var hit = !q || r.textContent.toLowerCase().indexOf(q) !== -1;
+      r.style.display = hit ? "" : "none";
+      if (hit) shown++;
+      if (hit && q) {
+        var re = new RegExp(esc(q), "gi");
+        r.querySelectorAll("th, td").forEach(function (c) {
+          c.innerHTML = c.innerHTML.replace(/(<[^>]*>)|([^<]+)/g, function (m, tag, text) {
+            return tag ? tag : text.replace(re, function (x) { return "<mark>" + x + "</mark>"; });
+          });
+        });
+      }
+    });
+    secs.forEach(function (s) {
+      var any = s.querySelector("tbody tr:not([style*='none'])");
+      s.style.display = any ? "" : "none";
+    });
+    empty.style.display = shown ? "none" : "block";
+  });
+})();
+</script>
+</body>
+</html>
